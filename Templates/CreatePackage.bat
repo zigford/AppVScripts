@@ -1,7 +1,10 @@
 @echo off
 
-REM =========================APPV SCRIPTING TEMPLATE v1.3.1==============================
+REM =========================APPV SCRIPTING TEMPLATE v1.3.2==============================
 REM ==================================Notes============================================
+REM Changes from v1.3.1 - 02/02/2018
+REM  Bugfix When using PVAD, the PVAD dir is now created prior to sequencing. Without
+REM   this, some portions of the PVAD dir are captured in PVAD and some in VFS
 REM Changes from v1.3 - 24/01/2018
 REM  Bugfix Prereqs now install and log to %BUILDLOGS%
 REM Changes from v1.2 - 19/01/2018
@@ -74,6 +77,7 @@ goto END
   ECHO powershell.exe -Command "&{& '.\%INSTALLER%' | Tee-Object '%BUILDLOGS%\%INSTALLER%.log'}" >> "%TI%"
   Set SEQUENCEROPTIONS=-Installer '%TI%' -Name '%PACKAGENAME%' -Path '%DESKTOP%'
   If DEFINED PVAD (
+    IF NOT EXIST "!PVAD!" mkdir "!PVAD!"
     Set SEQUENCEROPTIONS=!SEQUENCEROPTIONS! -PrimaryVirtualApplicationDirectory '!PVAD!'
   )
   If DEFINED APPVTemplate (

@@ -1,4 +1,8 @@
-'InstallSoftware.vbs Version 3.1.1
+'InstallSoftware.vbs Version 3.1.2
+
+'Changed from v3.1.1 - 06/02/2018
+' Feature, Ignore blank lines and don't attempt to execute them. They
+'   are logged in the log as 'Passing over blank line'
 
 'Changes from v3.1.0 - 07/03/2017
 ' Bugfix, wrong function used for Remark detection.
@@ -199,6 +203,10 @@ function Install(strCommand)
  If Left(strCommand,1) = "#" then
 	errPair = Split(strCommand, "#", -1, 1)
 	strCommand = LTrim(errPair(UBound(errPair)))
+ End If
+ If strCommand = "" then 
+    LogInfo "Passing over blank line"
+    Exit Function
  End If
  On Error Resume Next
   LogInfo "Executing (" & strCommand & ")"

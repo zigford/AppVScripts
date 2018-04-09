@@ -16,11 +16,11 @@ REM   file called specfile.bat. example:
 REM
 REM	specfile.bat
 REM
-REM     Set INSTALLER=InstallSoftware.bat
-REM 	Set PACKAGENAME=Autodesk_Revit_2017_APPV_Site_WKS
-REM 	Set PVAD=C:\Program Files\Autodesk
-REM		Set PREREQS=Prereqs.ps1
-REM		Set APPVTemplate=autodesk.appvt
+REM        Set INSTALLER=InstallSoftware.bat
+REM        Set PACKAGENAME=Autodesk_Revit_2017_APPV_Site_WKS
+REM        Set PVAD=C:\Program Files\Autodesk
+REM        Set PREREQS=Prereqs.ps1
+REM        Set APPVTemplate=autodesk.appvt
 REM
 REM Changes from v1.0 - 16/03/2017
 REM  Uses robocopy to provision source as its faster with many smaller files.

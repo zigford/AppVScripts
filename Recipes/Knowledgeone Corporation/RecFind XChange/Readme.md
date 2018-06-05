@@ -1,17 +1,17 @@
-# RecFind 6 2.9
-Script files to create production package of RecFind.
+# RecFind 6 Xchange 2.9
+Script files to create production package of RecFind Xchange.
 
 Author: Jesse Harris
 
 ## Discovery Notes
 Uses installsheild setup exe which can be silenced using the standard /S /v/qn params.
-Environment can be customized after installation by replacing RecFind6.exe.config manifest file in installdir
+Environment can be customized after installation by replacing Xchange.exe.config manifest file in installdir
 
 ### Install Dir
-C:\Program Files (x86)\RecFind 6\Client\
+C:\Program Files (x86)\RecFind 6\Xchange\
 
 ### Config File
-RecFind6.exe.config placed in the InstallDir set's the connecting environment.
+Xchange.exe.config placed in the InstallDir set's the connecting environment.
 
 ### Silent Switches
 |------|----------------------------------------------------|

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SequencerTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SequencerTemplateVersion>2</SequencerTemplateVersion>
+  <ID>5b140cad-914d-4eb3-92f7-1b0355e2ff45</ID>
+  <HashOverall>355218441</HashOverall>
+  <HashSettings>0</HashSettings>
+  <HashFileExclusions>-1446442591</HashFileExclusions>
+  <HashRegExclusions>-1710591880</HashRegExclusions>
+  <hashTargetOSes>371857150</hashTargetOSes>
+  <AllowMU>false</AllowMU>
+  <AppendPackageVersionToFilename>false</AppendPackageVersionToFilename>
+  <AllowLocalInteractionToCom>false</AllowLocalInteractionToCom>
+  <AllowLocalInteractionToObject>false</AllowLocalInteractionToObject>
+  <FullVFSWriteMode>false</FullVFSWriteMode>
+  <ExcludePreExistingSxSAndVC>false</ExcludePreExistingSxSAndVC>
+  <FileExclusions>
+    <string>[{AppData}]\Microsoft\AppV</string>
+    <string>[{AppVPackageDrive}]\$Recycle.Bin</string>
+    <string>[{AppVPackageDrive}]\System Volume Information</string>
+    <string>[{Cache}]</string>
+    <string>[{Common AppData}]\Microsoft\Crypto</string>
+    <string>[{Common AppData}]\Microsoft\Microsoft Antimalware</string>
+    <string>[{Common AppData}]\Microsoft\Microsoft Security Client</string>
+    <string>[{Common AppData}]\Microsoft\Network</string>
+    <string>[{Common AppData}]\Microsoft\Search\Data</string>
+    <string>[{Common AppData}]\Microsoft\Windows</string>
+    <string>[{Common AppData}]\Microsoft\Windows Defender</string>
+    <string>[{Common AppData}]\USOShared</string>
+    <string>[{Cookies}]</string>
+    <string>[{CryptoKeys}]</string>
+    <string>[{History}]</string>
+    <string>[{Local AppData}]</string>
+    <string>[{Local AppData}]\Temp</string>
+    <string>[{LocalAppDataLow}]</string>
+    <string>[{Personal}]</string>
+    <string>[{Profile}]\Local Settings</string>
+    <string>[{Profile}]\NTUSER.DAT.LOG1</string>
+    <string>[{Profile}]\NTUSER.DAT.LOG2</string>
+    <string>[{ProgramFilesX86}]\Windows Kits\10\Microsoft Application Virtualization\Sequencer\AppvSequencer</string>
+    <string>[{ProgramFiles}]\Microsoft Security Client</string>
+    <string>[{ProgramFiles}]\Windows Defender</string>
+    <string>[{Recent}]</string>
+    <string>[{System}]\spp</string>
+    <string>[{Windows}]\Debug</string>
+    <string>[{Windows}]\Logs\CBS</string>
+    <string>[{Windows}]\Temp</string>
+    <string>[{Windows}]\WindowsUpdate.log</string>
+    <string>[{Windows}]\WinSxS\ManifestCache</string>
+  </FileExclusions>
+  <RegExclusions>
+    <string>REGISTRY\MACHINE\SOFTWARE\Microsoft\AppV</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Microsoft\Microsoft Antimalware</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Microsoft\Microsoft Antimalware Setup</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Microsoft\Microsoft Security Client</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Policies\Microsoft\Microsoft Antimalware</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Microsoft\AppV</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Microsoft\Cryptography</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Microsoft\AppV</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Microsoft\Windows\CurrentVersion\Explorer\StreamMRU</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Wow6432Node\Microsoft\AppV</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\StreamMRU</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\Streams</string>
+  </RegExclusions>
+  <TargetOSes />
+</SequencerTemplate>

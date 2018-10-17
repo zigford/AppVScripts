@@ -7,7 +7,9 @@ Param($Path,
         "All"
     )]$Target,
     [switch]$DisableObjects,
-    [switch]$StripComments
+    [switch]$StripComments,
+    [switch]$SetIconsToEXE,
+    [switch]$Test
 )
 
     $Filter = Switch ($Target) {
@@ -31,6 +33,15 @@ Param($Path,
             $Comments = $XML.SelectNodes("//comments()")
             $Comments | ForEach-Object {$_.ParentNode.RemoveChild($_)}
         }
-        $XML.Save($_.FullName)
+        If ($SetIconsToEXE) {
+            ForEach ($Extension in $WorkingXML.UserConfiguration.Subsystems.Shortcuts.Extensions.Extension) {
+                $Extension.Shortcut.Icon = $Extension.Shortcut.Target
+            }
+        }
+        If ($Test) {
+            $XML
+        } else {
+            $XML.Save($_.FullName)
+        }
     }
 }

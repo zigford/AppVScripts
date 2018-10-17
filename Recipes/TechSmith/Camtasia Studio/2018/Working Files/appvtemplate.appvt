@@ -9,6 +9,7 @@
   <FileExclusions>
     <string>[{CryptoKeys}]</string>
     <string>[{Common AppData}]\Microsoft\Crypto</string>
+    <string>[{Common AppData}]\Package Cache</string>
     <string>[{Common AppData}]\Microsoft\Search\Data</string>
     <string>[{Cookies}]</string>
     <string>[{History}]</string>

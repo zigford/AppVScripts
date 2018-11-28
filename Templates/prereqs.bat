@@ -1,4 +1,11 @@
 @echo off
+REM ==============================================================
+REM =                                                            =
+REM = This is an example prereq installer. Customize it to your  =
+REM = needs.                                                     =
+REM =                                                            =
+REM ==============================================================
+
 Set SOURCE=%~dp0..\Source\Img
 Echo Installing prereqs from "%SOURCE%"
 

@@ -14,10 +14,9 @@ C:\Program Files (x86)\RecFind 6\Client\
 RecFind6.exe.config placed in the InstallDir set's the connecting environment.
 
 ### Silent Switches
-|------|----------------------------------------------------|
+
 |Param |Effect                                              |
 |------|----------------------------------------------------|
 |/S    |Silence Installsheild dialogs                       |
 |/v    |Pass params to embedded MSI                         |
 |/qb   |parameters passed to MSI for unattended installation|
-|------|----------------------------------------------------|

@@ -14,7 +14,7 @@ C:\Program Files (x86)\RecFind 6\DRM\
 DRM.exe.config placed in the InstallDir set's the connecting environment.
 
 ### Silent Switches
-|-------------------------------------|----------------------------------------------------|
+
 |Param                                |Effect                                              |
 |-------------------------------------|----------------------------------------------------|
 |/S                                   |Silence Installsheild dialogs                       |
@@ -22,4 +22,3 @@ DRM.exe.config placed in the InstallDir set's the connecting environment.
 |/qb                                  |params passed to MSI for unattended installation    |
 |CM_SERVERNAME=\"recfind.usc.edu.au\" |params passed to MSI to set server." must be escaped|
 |CM_SYSTEMNAME=\"RecFind\""           |params passed to MSI to set eviron." must be escaped|
-|-------------------------------------|----------------------------------------------------|

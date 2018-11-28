@@ -4,7 +4,7 @@
   <AppendPackageVersionToFilename>false</AppendPackageVersionToFilename>
   <AllowLocalInteractionToCom>true</AllowLocalInteractionToCom>
   <AllowLocalInteractionToObject>true</AllowLocalInteractionToObject>
-  <FullVFSWriteMode>false</FullVFSWriteMode>
+  <FullVFSWriteMode>true</FullVFSWriteMode>
   <ExcludePreExistingSxSAndVC>false</ExcludePreExistingSxSAndVC>
   <FileExclusions>
     <string>[{CryptoKeys}]</string>

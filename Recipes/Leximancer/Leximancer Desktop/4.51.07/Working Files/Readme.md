@@ -61,3 +61,8 @@ C:\Program Files\Leximancer-Desktop-V4
         leximancer.exe
 
 4. Edit the Leximancer shortcut to point to the bat file instead of leximancer.exe
+
+### Other discoveries
+
+Application installs to C:\Program Files, yet expects users to be able to write to this location.
+Will have to use FullVFSWriteMode=True or the application will not launch succesfully.

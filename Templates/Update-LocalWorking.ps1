@@ -38,4 +38,8 @@ For ($i=3; $i -gt 0; $i--) {
 }
 
 Write-Output $PackageSourceDir
+$WorkingFiles = Join-Path -Path $PackageSourceDir -Child "Working Files"
+If (! (Test-Path -Path $WorkingFiles)) {
+    New-Item -ItemType Directory -Path $PackageSourceDir -Name "Working Files"
+}
 Copy-Item -Recurse (Join-Path -Path $PSScriptRoot -Child *) (Join-Path -Path $PackageSourceDir -Child "Working Files") -Whatif:$Whatif

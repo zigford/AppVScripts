@@ -4,3 +4,6 @@ SET WORK=%~dp0
 cd "%SOURCE%"
 echo Installing Software
 start /wait "" R-3.5.1-win.exe /SILENT /NORESTART /LOG="C:\BuildLogs\rinstall.log"
+
+echo Install rtools
+start /wait "" Rtools34.exe /SILENT

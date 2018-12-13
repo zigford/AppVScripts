@@ -1,11 +1,11 @@
-# R for Windows 3.5.1
+# R for Windows 3.5.1 with RTools 34
 Script files to create APPV package of R for Windows.
 
 Author: jpharris
 
 Discovery Date: 12/13/2018 16:22:57
 
-## Discovery Notes
+## Discovery Notes for R for Windows
 
 ### Installer filename
 
@@ -42,9 +42,29 @@ R
 | UninstallString      | "C:\Program Files\R\R-3.5.1\unins000.exe"         |
 | QuietUninstallString | "C:\Program Files\R\R-3.5.1\unins000.exe" /SILENT |
 
-### Configurations
+## Discovery Notes for R Tools
 
-### Disable updates
+### Installer filename
 
-### License configuration
+`Rtools34.exe`
 
+### Switches or MSI Parameters
+
+| Param                            | Effect                                |
+|----------------------------------|---------------------------------------|
+| /SILENT                          | Passive dialogs                       |
+
+### Install Dir
+
+`C:\Rtools`
+
+### Registry information
+
+| Attribute            | Value                            |
+|----------------------|----------------------------------|
+| Wow6432Node          | Yes                              |
+| Uninstall Key        | Rtools_is1                       |
+| DisplayName          | Rtools 3.4                       |
+| DisplayVersion       | N/A                              |
+| UninstallString      | "c:\Rtools\unins000.exe"         |
+| QuietUninstallString | "c:\Rtools\unins000.exe" /SILENT |

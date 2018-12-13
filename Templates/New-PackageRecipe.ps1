@@ -61,6 +61,46 @@ function Set-SpecFile {
     Set-Content -Path $Path -Value $NewFile
 }
 
+function New-Readme {
+    [CmdLetBinding()]
+    Param(
+            [Parameter(Mandatory=$True)]$Path,
+            [Parameter(Mandatory=$True)]$Product,
+            [Parameter(Mandatory=$True)]$Vendor,
+            [Parameter(Mandatory=$True)]$Version
+            )
+
+    If (-Not ($PSVersionTable.PSEdition -eq 'Desktop' -or $IsWindows)) {
+        $User = $env:USER    
+    } else {
+        $User = $env:USERNAME
+    }
+
+@"
+# ${Product} ${Version}
+Script files to create APPV package of ${Product}.
+
+Author: ${User}
+
+Discovery Date: $(Get-Date)
+
+## Discovery Notes
+
+### Install Dir
+
+### Configurations
+
+### Switches or MSI Parameters
+|------|----------------------------------------------------|
+|Param |Effect                                              |
+|------|----------------------------------------------------|
+|/S    |Silence Installsheild dialogs                       |
+|/v    |Pass params to embedded MSI                         |
+|/qb   |parameters passed to MSI for unattended installation|
+|------|----------------------------------------------------|
+"@ | Out-File -Path $Path
+}
+
 $Restriction = Switch ($License) {
     'Restricted' {'Restricted_WKS'}
     'Site'       {'Site_USR,WKS'}
@@ -78,3 +118,5 @@ Copy-Item -Path (Join-Path -Path $PSScriptRoot -Child *) -Exclude $MyInvocation.
 Set-Location $NewWorking
 Set-SpecFile -Path (Join-Path -Path $NewWorking -Child specfile.bat) `
     -PackageName "${Vendor}_${Product}_${Version}_${TargetFormat}_${Restriction}"
+New-Readme -Path (Join-Path -Path $NewWorking -Child Readme.md) `
+    -Product $Product -Vendor $Vendor -Version $Version

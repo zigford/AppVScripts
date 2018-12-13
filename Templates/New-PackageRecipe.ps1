@@ -86,18 +86,25 @@ Discovery Date: $(Get-Date)
 
 ## Discovery Notes
 
+### Start menu icons
+
 ### Install Dir
+
+### Registry information
 
 ### Configurations
 
+### Disable updates
+
+### License configuration
+
 ### Switches or MSI Parameters
-|------|----------------------------------------------------|
+
 |Param |Effect                                              |
 |------|----------------------------------------------------|
 |/S    |Silence Installsheild dialogs                       |
 |/v    |Pass params to embedded MSI                         |
 |/qb   |parameters passed to MSI for unattended installation|
-|------|----------------------------------------------------|
 "@ | Out-File -Path $Path
 }
 

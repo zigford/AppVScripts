@@ -5,7 +5,7 @@ Scripts and templates for APPV Packaging
 
 A Set of template files for automating creation of an appv package
 
-Create a new recipe by running 'New-PackageRecipe', which will 
+Create a new recipe by running 'New-PackageRecipe.ps1', which will 
 prompt for some parameters and create a corresponding 'recipe' directory
 under the 'Recipes' directory.
 

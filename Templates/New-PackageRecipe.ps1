@@ -1,16 +1,16 @@
 <#
 .SYNOPSIS
-    Create a new package template
+    Create a new package recipe
 .DESCRIPTION
     Create a copy of the package template scripts into a new directory based on the name paramerters provided. Also, attempt to dynamically create specfile.
 .PARAMETER Vendor 
-    Specify the vendor of the applicatio. Will prompt if not specified
+    Specify the Vendor of the application Will prompt if not specified
 .PARAMETER Product 
-    Specify the Product of the applicatio. Will prompt if not specified
+    Specify the Product of the application Will prompt if not specified
 .PARAMETER Version 
-    Specify the Version of the applicatio. Will prompt if not specified
+    Specify the Version of the application Will prompt if not specified
 .EXAMPLE
-    .\New-PackageFromTemplate -Vendor "Adobe" -Product "Reader DC" -Version 2018
+    .\New-PackageRecipe.ps1 -Vendor "Adobe" -Product "Reader DC" -Version 2018 -TargetFormat APPV -License Site
 .NOTES
     notes
 .LINK
@@ -64,7 +64,7 @@ function Set-SpecFile {
 $Restriction = Switch ($License) {
     'Restricted' {'Restricted_WKS'}
     'Site'       {'Site_USR,WKS'}
-    'Open'       {'Open,USR_WKS'}
+    'Open'       {'Open_USR,WKS'}
 }
 
 $RecipeDir = Join-Directories -Paths (Split-Path -Path $PSScriptRoot -Parent),

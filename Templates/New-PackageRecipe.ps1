@@ -86,6 +86,8 @@ Discovery Date: $(Get-Date)
 
 ## Discovery Notes
 
+### Installer filename
+
 ### Start menu icons
 
 ### Install Dir

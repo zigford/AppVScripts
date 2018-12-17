@@ -88,11 +88,35 @@ Discovery Date: $(Get-Date)
 
 ### Installer filename
 
-### Start menu icons
+`setup.exe`
+
+### Switches or MSI Parameters
+
+| Param | Effect                                               |
+|-------|------------------------------------------------------|
+| /S    | Silence Installsheild dialogs                        |
+| /v    | Pass params to embedded MSI                          |
+| /qb   | parameters passed to MSI for unattended installation |
 
 ### Install Dir
 
+### Start menu icons
+
+```
+Programs\VendorFolder
+         Shortcut.lnk
+```
+
 ### Registry information
+
+| Attribute            | Value         |
+|----------------------|---------------|
+| Wow6432Node          | false         |
+| Uninstall Key        | {exampleguid} |
+| DisplayName          |               |
+| DisplayVersion       |               |
+| UninstallString      |               |
+| QuietUninstallString |               |
 
 ### Configurations
 
@@ -100,13 +124,6 @@ Discovery Date: $(Get-Date)
 
 ### License configuration
 
-### Switches or MSI Parameters
-
-|Param |Effect                                              |
-|------|----------------------------------------------------|
-|/S    |Silence Installsheild dialogs                       |
-|/v    |Pass params to embedded MSI                         |
-|/qb   |parameters passed to MSI for unattended installation|
 "@ | Out-File -Path $Path
 }
 

@@ -5,6 +5,8 @@ Author: jpharris
 
 Discovery Date: 12/10/2018 13:09:57
 
+Credit to [Nick Andreas][1]
+
 ## Discovery Notes for SQL Server Management Studio
 
 ### Installer filename
@@ -134,3 +136,5 @@ Reg Type   : String
 Bitness    : 32
 Operator   : Equals
 Data Value : 14.0.23107.20
+
+[1]:https://www.software-virtualisierung.de/app-v/app-v-5-rezept-ssms-17-x-sql-server-management-studio-2016.html

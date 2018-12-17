@@ -25,16 +25,21 @@ function Get-PathArray {
     return $Array
 }
 
+# Get package version, product and vendor from path struct.
 $PackagePath = Get-PathArray -Path $PSScriptRoot
-$Version = $PackagePath[1]
-$Product = $PackagePath[2]
-$Vendor  = $PackagePath[3]
-
 $PackageSourceDir = $Appdev
 
+# Assemble Source dir from package path array, create dirs where nessecary.
 For ($i=3; $i -gt 0; $i--) {
     $PackageSourceDir = Join-Path -Path $PackageSourceDir -Child $PackagePath[$i]
+    If (! (Test-Path -Path $PackageSourceDir)) {
+        New-Item -ItemType Directory -Path $PackageSourceDir
+    }
 }
 
 Write-Output $PackageSourceDir
+$WorkingFiles = Join-Path -Path $PackageSourceDir -Child "Working Files"
+If (! (Test-Path -Path $WorkingFiles)) {
+    New-Item -ItemType Directory -Path $PackageSourceDir -Name "Working Files"
+}
 Copy-Item -Recurse (Join-Path -Path $PSScriptRoot -Child *) (Join-Path -Path $PackageSourceDir -Child "Working Files") -Whatif:$Whatif

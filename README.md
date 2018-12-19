@@ -5,18 +5,36 @@ Scripts and templates for APPV Packaging
 
 A Set of template files for automating creation of an appv package
 
-Create a new recipe by running 'New-PackageRecipe', which will 
+Create a new recipe by running 'New-PackageRecipe.ps1', which will 
 prompt for some parameters and create a corresponding 'recipe' directory
 under the 'Recipes' directory.
 
 ## Recipes
 
 Scripts customized for silently creating an APPV package.
-Typically consists of:
-* CreatePackage.bat is the main script launched to create the package.
-* specfile.bat which specifies the package name, and APPV settings.
-* InstallSoftware.bat Commands used to install the software silently.
-* appvtemplate.appvt
+
+Recipes are stored in the following tree structure:
+
+```
+\Recipes\Vendor\Product\Version\
+                                APPV
+                                Working Files
+                                Source
+```
+
+The recipe scriptr are in the 'Working Files'. Source and generated APPV packages
+are not tracked in this repo.
+
+### Quick descripton on "Working Files"
+
+| File           | Purpose                                     | Mandatory |
+|----------------|---------------------------------------------|-----------|
+| specfile.bat   | Specify package name, PVAD, Install scripts | Yes       |
+| Install script | Script to silently install software.        | Yes       |
+| appv template  | Specify and appv template                   | No        |
+
+In order to use a recipe, clone the repository and copy `CreatePackage.bat`
+into "Working Files". Then double click it from the clean machine. 
 
 ## Scripts
 

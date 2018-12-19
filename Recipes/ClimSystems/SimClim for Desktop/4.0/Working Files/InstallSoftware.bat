@@ -21,4 +21,4 @@ echo ^<settings^>^
 
     ^<networkLicensePort^>50250^</networkLicensePort^>^
 
-^</settings^>>"C:\Program Files (x86)\CLIMsystems\SimCLIM Desktop\AppSettings.xml"
+^</settings^>>"C:\Program Files (x86)\CLIMsystems\SimCLIM Desktop\x86\AppSettings.xml"

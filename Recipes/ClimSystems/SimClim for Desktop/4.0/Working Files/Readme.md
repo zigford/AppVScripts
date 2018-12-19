@@ -38,7 +38,7 @@ C:\Program Files (x86)\CLIMsystems\SimCLIM Desktop\
 
 #### License configuration
 
-Place 'AppSettings.xml' into the InstallDir
+Place 'AppSettings.xml' into the InstallDir\x86
 
 Example:
 

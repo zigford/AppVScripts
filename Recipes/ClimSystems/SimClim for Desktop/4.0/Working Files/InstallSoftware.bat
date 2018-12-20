@@ -12,6 +12,11 @@ ren "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\CLIMsystems\SimCLIM De
 ren "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\CLIMsystems\SimCLIM Desktop\SimCLIM.lnk" "SimClim 4.0.lnk"
 ren "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\CLIMsystems\SimCLIM Desktop" "SimCLIM Desktop 4.0"
 
+Set USERSettings=%LOCALAPPDATA%\CLIMsystems\SimCLIM Desktop
+echo Force user settings in bubble
+mkdir "%USERSettings%"
+echo "Dummy file to force dir in bubble" > "%USERSettings%\dummyfile"
+
 echo Install License file
 echo ^<settings^>^
 

@@ -73,3 +73,17 @@ Example:
 First run the Global installer then run the updater.
 Unfortunatly it doesn't seem like the global installer can fully suppress dialogs. A license window
 up during install and I have asked to see if it can be suppressed.
+
+### Notes for future packagers
+
+On first launch, SimClim creates a directory `%LOCALAPPDATA%\ClimSystems\SimCLIM Desktop` which
+contains `Settings.ClmConfig`. This XML file contains the path to the simclim data files which
+when sequenced non-pvad, will be contain the PackageID\VersionID in their path. The potential issue
+with this, is that future updates to the package, this file outside the bubble will have an invalid
+path. There are a few idea's to work around this:
+
+* Sequence to PVAD
+* Include this directory in the bubble with override enabled.
+* Create a launch script which delete, or updates these settings
+
+I've decided to go with the second idea.

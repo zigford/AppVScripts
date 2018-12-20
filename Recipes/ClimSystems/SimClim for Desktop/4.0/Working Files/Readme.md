@@ -5,13 +5,20 @@ Author: jpharris
 
 Discovery Date: 12/13/2018 12:53:23
 
+---
+
 ## Discovery Notes
 
 ### Installer filename
 
-SimCLIM_Desktop_Update_4_10_99_0.exe
+`SimCLIM_Desktop_Global_4_2_0_222.exe`
+
+### Updater filename
+
+`SimCLIM_Desktop_Update_4_10_99_0.exe`
 
 ### Start menu icons
+_In the All Users Start-Menu_
 
     CLIMsystems\SimCLIM Desktop\
         Configuration license manager.lnk
@@ -24,11 +31,21 @@ SimCLIM_Desktop_Update_4_10_99_0.exe
 
 C:\Program Files (x86)\CLIMsystems\SimCLIM Desktop\
 
+### Switches or MSI Parameters
+_Works for global install and update_
+
+| Param               | Effect                  |
+|---------------------|-------------------------|
+| /SILENT             | Silent                  |
+| /LOG="C:\BuildLogs" | Save logs into location |
+| /NORESTART          | Suppress reboot         |
+
 ### Registry information
+_As of post update install_
 
 | Attribute            | Setting                                                                   |
 |----------------------|---------------------------------------------------------------------------|
-| ProductID            | {17C46D83-764A-4CEC-94A3-D092D1A7962B}_is1                                |
+| ProductID            | `{17C46D83-764A-4CEC-94A3-D092D1A7962B}_is1`                              |
 | DisplayVersion       | 4.10.99.0                                                                 |
 | DisplayName          | SimCLIM Desktop                                                           |
 | UninstallString      | "C:\Program Files (x86)\CLIMsystems\SimCLIM Desktop\unins000.exe"         |
@@ -49,16 +66,10 @@ Example:
             <networkLicensePort>50250</networkLicensePort>
         </settings>
 
-### Switches or MSI Parameters
+---
 
-| Param               | Effect                  |
-|---------------------|-------------------------|
-| /SILENT             | Silent                  |
-| /LOG="C:\BuildLogs" | Save logs into location |
-| /NORESTART          | Suppress reboot         |
+## Packager Notes
 
-
-### Notes
-
-It seems that the installer does not provide any datasets, so might have to deploy 
-the dataset after the application is deployed
+First run the Global installer then run the updater.
+Unfortunatly it doesn't seem like the global installer can fully suppress dialogs. A license window
+up during install and I have asked to see if it can be suppressed.

@@ -3,7 +3,9 @@ SET WORK=%~dp0
 
 cd "%SOURCE%"
 echo Installing Software
-SimCLIM_Desktop_Update_4_10_99_0.exe /SILENT /LOG="C:\BuildLogs\install.log" /NORESTART
+start /wait "" SimCLIM_Desktop_Global_4_2_0_222.exe /SILENT /LOG="C:\BuildLogs\install_global.log" /NORESTART
+echo Installing Updates
+start /wait "" SimCLIM_Desktop_Update_4_10_99_0.exe /SILENT /LOG="C:\BuildLogs\install_update.log" /NORESTART
 
 echo Changing shortcut names
 ren "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\CLIMsystems\SimCLIM Desktop\SimCLIM (64-bit).lnk" "SimClim (64-bit) 4.0.lnk"

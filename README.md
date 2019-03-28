@@ -5,9 +5,9 @@ Scripts and templates for APPV Packaging
 
 A Set of template files for automating creation of an appv package
 
-Create a new recipe by running 'New-PackageRecipe.ps1', which will 
-prompt for some parameters and create a corresponding 'recipe' directory
-under the 'Recipes' directory.
+Create a new recipe by running 'New-PackageRecipe.ps1' from the templates
+directory, which will prompt for some parameters and create a corresponding
+'recipe' directory under the 'Recipes' directory.
 
 ## Recipes
 
@@ -22,7 +22,7 @@ Recipes are stored in the following tree structure:
                                 Source
 ```
 
-The recipe scriptr are in the 'Working Files'. Source and generated APPV packages
+The recipe scripts are in the 'Working Files'. Source and generated APPV packages
 are not tracked in this repo.
 
 ### Quick descripton on "Working Files"

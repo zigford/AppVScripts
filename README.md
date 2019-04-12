@@ -38,7 +38,18 @@ into "Working Files". Then double click it from the clean machine.
 
 ## Scripts
 
-Scripts used in non-appv package deployment
+Scripts used in general package deployment.
+
+    InstallSoftware.vbs
+
+Runs a .clist file of commands and records their exit codes and output into a
+log.
+
+    ConvertTo-EncodedCommand.ps1
+
+Quick and dirty powershell to encode command/(s) in the form of a string into
+Base64 content which can be used for embedding into an AppV Deployment.XML
+file.
 
 ## USC-APPV
 

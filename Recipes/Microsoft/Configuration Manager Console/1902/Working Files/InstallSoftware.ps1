@@ -57,13 +57,12 @@ Write-Verbose "Registering MDT in Config Manager console"
 
 $ErrorActionPreference = 'Stop'
 # Get the CM12 path
-$Path =
+$cmPath =
     (Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\ConfigMgr10\Setup `
         -Name "UI Installation Directory").'UI Installation Directory'
-if ($null -ne $Path) {
-    $mdtPath =
-        (Get-ItemProperty "HKLM:\Software\Microsoft\Deployment 4" `
-            -Name Install_Dir).Install_Dir
+$mdtPath =
+    (Get-ItemProperty "HKLM:\Software\Microsoft\Deployment 4" `
+        -Name Install_Dir).Install_Dir
 
     # Copy needed DLLs
 
@@ -73,11 +72,10 @@ if ($null -ne $Path) {
     'Microsoft.BDD.CM12Wizards.dll',
     'Microsoft.BDD.PSSnapIn.dll',
     'Microsoft.BDD.Core.dll' | ForEach-Object {
-        Copy-Item "$mdtPath\Bin\$_" -Destination "$Path\Bin"
+        Copy-Item "$mdtPath\Bin\$_" -Destination "$cmPath\Bin"
     }
 
     # Copy extensions folder
     Copy-Item -Path "$mdtPath\Templates\CM12Extensions" `
-        -Destination "$Path\XmlStorage\Extensions" -Force -Recurse
-}
+        -Destination "$cmPath\XmlStorage\Extensions" -Force -Recurse
 Stop-Transcript

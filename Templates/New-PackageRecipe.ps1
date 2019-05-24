@@ -124,6 +124,8 @@ Programs\VendorFolder
 
 ### License configuration
 
+### Other software installed
+
 "@ | Out-File -Path $Path
 }
 
